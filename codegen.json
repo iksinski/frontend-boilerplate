@@ -1,0 +1,23 @@
+{
+  "schema": "http://localhost:9001/graphql",
+  "documents": "./src/**/*.graphql",
+  "overwrite": true,
+  "generates": {
+    "./src/graphql-types.tsx": {
+      "plugins": [
+        "typescript",
+        "typescript-operations",
+        "typescript-react-apollo",
+      ],
+      "config": {
+        "withHooks": true,
+        "typesPrefix": "GraphQl"
+      }
+    },
+    "schema.graphql": {
+      "plugins": [
+        "schema-ast"
+      ]
+    }
+  }
+}
