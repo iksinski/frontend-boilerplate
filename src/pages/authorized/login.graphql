@@ -1,6 +1,6 @@
-mutation signIn($email: String! $password: String!) {
-    signIn(email: $email password: $password) {
-        userId
+mutation login($login: String! $password: String!) {
+    login(login: $login password: $password) {
+        id
         token
     }
 }
